@@ -15,8 +15,8 @@ Dublin Airport,Zürich Airport,1240
 Zürich Airport,Copenhagen Airport,949
 Copenhagen Airport,Palma De Mallorca Airport,1925
 Palma De Mallorca Airport,Manchester Airport,1581
-Manchester Airport,"Oslo Airport, Gardermoen",1066
-"Oslo Airport, Gardermoen",Lisbon Portela Airport,2768
+Manchester Airport,Oslo Airport Gardermoen,1066
+Oslo Airport Gardermoen,Lisbon Portela Airport,2768
 Lisbon Portela Airport,Stockholm Arlanda Airport,2989
 Stockholm Arlanda Airport,Antalya Airport,2692
 Antalya Airport,London Stansted Airport,2914
@@ -71,10 +71,10 @@ Heraklion International Airport,Lanzarote Airport,3692
 Lanzarote Airport,Göteborg Landvetter Airport,3771
 Göteborg Landvetter Airport,Valencia Airport,1336
 Valencia Airport,Sofia Airport,2028
-Sofia Airport,"Thessaloniki Airport ""Makedonia""",231
-"Thessaloniki Airport ""Makedonia""",Bordeaux-Mérignac Airport,1987
-Bordeaux-Mérignac Airport,"Bergen Airport, Flesland",1774
-"Bergen Airport, Flesland",Riga International Airport,1145
+Sofia Airport,Thessaloniki Airport Makedonia,231
+Thessaloniki Airport Makedonia,Bordeaux-Mérignac Airport,1987
+Bordeaux-Mérignac Airport,Bergen Airport Flesland,1774
+Bergen Airport Flesland,Riga International Airport,1145
 Riga International Airport,Fuerteventura Airport,4354
 Fuerteventura Airport,Malta International Airport,2783
 Malta International Airport,Ciampino–G. B. Pastine International Airport,1002

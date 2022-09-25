@@ -25,21 +25,21 @@ def path(predecessor, weight, u, v):
     results = results[::-1]
     weightresult = weightresult[::-1]
     resultsstring = []
-    stringresult = " --> ".join(results)
+    stringresult = " > ".join(results)
 
     if len(results) == 1:
-        texto = f"Não é possível ir de {u} à {v}"
-        print("RESULTADO:", texto)
+        
+        print("Não é possível ir de", u, "à", v)
         return
 
     else:
             for i in range(len(results) - 1):
-                stringatual = f"{results[i]} --> {results[i + 1]} : Distância = {((int(weightresult[i + 1]) - int(weightresult[i]))):.1f} Km "
+                stringatual = f"{results[i]} > {results[i + 1]} : Distância = {((int(weightresult[i + 1]) - int(weightresult[i]))):.1f} Km "
                 resultsstring.append(stringatual)
 
-            stringatual = f"\nDistância Total: {weightresult[-1]} Km"
+            stringatual = f"\nDistância total: {weightresult[-1]} Km"
             resultsstring.append(stringatual)
-    resultsstring.append(f"\nRota total:\n{stringresult}")
+    resultsstring.append(f"\nCaminho:\n{stringresult}")
     stringfinal = "\n".join(resultsstring)
 
     print("MENOR ROTA:", stringfinal)
@@ -60,7 +60,7 @@ def bellmanford(origin, graph, destiny):
 
     for u, v, w in graph.paths:
         if p[v] > p[u] + w:
-            print('Ciclo negativo encontrado!')
+            print('Ciclo negativo detectado')
             return
 
     path(pred, p, origin, destiny)
@@ -81,4 +81,9 @@ with open('dataset.csv', newline='') as csvfile:
             v.airports.append(destination)
         v.paths.append([origin,destination,int(distance)])
         graph.append([origin,destination])
-    bellmanford('Zürich Airport', v, 'Frankfurt am Main International Airport')
+    originInput = input('Digite o aeroporto origem: ')
+    destinationInput = input('Digite o aeroporto destino: ')
+    if originInput not in v.airports or destinationInput not in v.airports:
+        print('Aeroporto não encontrado.')
+    else:
+        bellmanford(originInput, v, destinationInput)
