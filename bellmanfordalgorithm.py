@@ -1,3 +1,5 @@
+import networkx as nx
+import matplotlib.pyplot as plt
 import csv
 class Vertices:
     def __init__(self):
@@ -28,7 +30,7 @@ def path(predecessor, weight, u, v):
     stringresult = " > ".join(results)
 
     if len(results) == 1:
-        
+
         print("Não é possível ir de", u, "à", v)
         return
 
@@ -67,6 +69,11 @@ def bellmanford(origin, graph, destiny):
 
     return True
 
+def viewGraph(graph):
+    G = nx.DiGraph()
+    G.add_edges_from(graph)
+    nx.draw_networkx(G)
+    plt.show()
 
 v = Vertices()
 graph = []
@@ -87,3 +94,4 @@ with open('dataset.csv', newline='') as csvfile:
         print('Aeroporto não encontrado.')
     else:
         bellmanford(originInput, v, destinationInput)
+        viewGraph(graph)
